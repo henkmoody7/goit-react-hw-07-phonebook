@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/selectors';
 import { Form, Input, Button } from './ContactsForm.styled';
 
@@ -14,7 +14,7 @@ export const ContactsForm = () => {
     if (checkContact) {
       alert(`${name.value} has added allready`);
     } else {
-      dispatch(addContacts(name.value, number.value));
+      dispatch(addContact({ name: name.value, number: number.value }));
     }
 
     e.currentTarget.reset();

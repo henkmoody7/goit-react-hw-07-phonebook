@@ -15,7 +15,7 @@ export function App() {
       <h1>Phonebook</h1>
       <ContactsForm />
       <Filter />
-      <h2>Contacts</h2>
+
       <ContactsList />
     </div>
   );
